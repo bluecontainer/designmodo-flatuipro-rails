@@ -99,7 +99,7 @@ module Flatuipro
 
         # local-fonts.less
         gsub_file(File.join(gem_assets_dir, "less/modules", "local-fonts.less"), /~"url.+?"/) { |match|
-          match[2..-2].sub(/url\('(.+?)'\)/, "font-url('\\1')")
+          match[2..-2].sub(/url\('(.+?)'\)/, "asset-url('\\1')")
         }
 
         # glyphicons.less
